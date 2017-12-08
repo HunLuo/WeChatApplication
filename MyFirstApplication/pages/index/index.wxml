@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='userscore'>
+    <text class='h2'>我的信用分:</text>
+      <text class='h1'>{{score}}</text>
+      <text class='h3'>更新时间：2017-11-16</text>
+  </view>
+  <view class='tips'>
+    <text class='tips1'>推荐适合您的信用借款平台</text>
+    <text class='tips2'>建议同时申请多个平台，预计可借30000元</text>
+  </view>
+  <scroll-view scroll-y class='list'>
+    <view class='listitem' wx:for="{{array}}" wx:for-index="index" wx:for-item="platform">
+      <view class='contentgroup'>
+        <image class='icon' mode='aspectFill' src='/image/icon.png'></image>
+      </view>
+      <view class='contentgroup' style='margin-right:auto'>
+        <text>宜人贷\n</text>
+        <text class='content'>{{index}}: {{platform.message}}\n</text>
+        <text>可借额度:3000元</text>
+      </view>
+      <view class='contentgroup'>
+        <button class="listbtn" size="mini" type="primary">立即借款</button>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>
